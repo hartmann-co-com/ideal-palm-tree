@@ -3,7 +3,6 @@ import { useRouter } from 'next/router'
 import Link from 'next/link'
 import { gql, useMutation } from '@apollo/client'
 import { getErrorMessage } from '../lib/form'
-import Field from '../components/field'
 import {Button, Divider, Heading, Input, InputGroup, InputRightElement, Spacer, Stack, VStack} from "@chakra-ui/react";
 
 const SignUpMutation = gql`
