@@ -5,6 +5,7 @@ import { removeTokenCookie } from '../lib/auth-cookies'
 
 export const resolvers = {
   Query: {
+
     async viewer(_parent, _args, context, _info) {
       try {
         const session = await getLoginSession(context.req)
@@ -33,6 +34,7 @@ export const resolvers = {
           email: user.email,
         }
 
+        console.dir(context);
         await setLoginSession(context.res, session)
 
         return { user }
